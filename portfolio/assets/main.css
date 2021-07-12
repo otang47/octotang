@@ -44,6 +44,20 @@ hr {
   padding: 60px 0;
 
 }
+
+/*top nav*/
+.topNav{
+  margin: auto 0;
+  text-align: center;
+  /*background-color: red;*/
+  position: sticky;
+}
+
+/*playground*/
+.playground {
+  background-color: white;
+}
+
 /*homepage*/
 .homepage h1 {
   margin: 100px 0 0 0;
