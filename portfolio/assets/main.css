@@ -35,7 +35,10 @@ hr {
   border-top: 5px;
 }
 
-
+a {
+  color: white;
+  text-decoration: none;
+}
 
 .content-wrap {
   max-width: 800px;
