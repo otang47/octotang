@@ -95,7 +95,8 @@ hr {
 .appLevels img {
   float: left;
   margin-right: 20px;
-  max-width: 60%
+  max-width: 60%;
+  max-height: 60%;
 }
 .level {
   overflow: hidden;
