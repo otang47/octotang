@@ -119,6 +119,8 @@ a {
   margin: 10px;
 }
 
+
+
 /*side navigation*/
 .sidenav {
   height: 100%;
@@ -162,6 +164,7 @@ a {
   .sidenav a {font-size: 18px;}
 }
 
+/*homepage*/
 .homepage {
   margin-left: 20%;
   top: 0%;
@@ -176,7 +179,13 @@ a {
   height: 100vh;
   background-color: #92f7b5;
 }
+.column img:hover {
+  opacity: 50%;
+}
 
+.homepage h1 {
+  font-size: 100px;
+}
 
 .css-1kmh77e {
     display: grid;
