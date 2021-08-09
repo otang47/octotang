@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" href="assets/main.css">
+
 	<title></title>
 </head>
 
@@ -30,12 +32,45 @@
 		      <p>
 		      	Penn Appétit is the University of Pennsylvania's innovative, student-run magazine covering all things food. As a designer on the team, I collaborated with writers for the semesterly publication to best complement their strength and bring their writing to life.
 		      </p>
-		<section class="photoGallery">
-			<img src="assets/pennAppSample.png">
-			<img src="assets/pennAppCornSpread.png">
-			<img src="assets/Spring 2021 Design Energizing.png">
-			<img src="assets/pennAppPateChaud.png">
-		</section>
+		<div class="carousel-wrapper">
+		    <div class="carousel">
+
+		      <img class="carousel__photo initial" src="assets/pennAppSample.png">
+		      <img class="carousel__photo" src="assets/pennAppCornSpread.png">
+		      <img class="carousel__photo" src="assets/Spring 2021 Design Energizing.png">
+		      <img class="carousel__photo" src="assets/pennAppPateChaud.png">
+<!-- 		      <img class="carousel__photo" src="http://placekitten.com/1600/900"> -->
+		      
+		      <div class="carousel__button--next"></div>
+		      <div class="carousel__button--prev"></div>
+
+		    </div>
+		  </div>
+	</div>
+
+		<!-- <div class="carousel">
+		  <button class="carousel__button previous" id="previous"><</button>
+		  <div class="carousel__images">
+		    <img src="assets/pennAppSample.png">
+		    <img src="assets/pennAppCornSpread.png">
+		    <img src="assets/Spring 2021 Design Energizing.png">
+		    <img src="assets/pennAppPateChaud.png">
+		  </div>
+		  <button class="carousel__button next" id="next">></button>
+		</div> -->
+		
+		<!-- <section class="carousel">
+			<button class="carousel__button previous" id="previous"></button>
+			<div class="carousel__images">
+				<img src="assets/pennAppSample.png">
+				<img src="assets/pennAppCornSpread.png">
+				<img src="assets/Spring 2021 Design Energizing.png">
+				<img src="assets/pennAppPateChaud.png">
+			</div>
+			<button class="carousel__button next" id="next"></button>
+		</section> -->
+
+<script  src="script.js"></script>
 	
 </body>
 </html>

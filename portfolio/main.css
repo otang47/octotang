@@ -1,0 +1,533 @@
+@font-face {
+  font-family: workSans;
+  src: url(Work_Sans/WorkSans-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: workSans;
+  background-color: black;
+  color: white;
+}
+
+q {
+  font-family: workSans;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+p {
+  font-size: 20px;
+  /*margin-top: 0;*/
+}
+
+h1{
+  font-weight: bold;
+  font-size: 40px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 30px;
+  margin:40px 0 0 0 ;
+}
+
+hr {
+  border-top: 5px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.content-wrap {
+  max-width: 800px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 60px 0;
+
+}
+
+/*top nav*/
+.topNav{
+  margin: auto 0;
+  text-align: center;
+  /*background-color: red;*/
+  position: sticky;
+}
+
+/*playground*/
+.playground {
+  background-color: white;
+  color: black;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.playground h1 {
+  color: black;
+
+}
+
+/*homepage*/
+.homepage h1 {
+  margin: 100px 0 0 0;
+  font-size: 60px;
+}
+
+/*Project Information*/
+.intro {
+  /*background: red;*/
+  overflow: hidden;
+  display: inline-block;
+}
+
+.intro img, .intro video{
+  float: left;
+  margin-right: 40px;
+  max-width: 70%;
+  /*max-height: 50%;*/
+  /*overflow: hidden;*/
+}
+
+.intro ul{
+  list-style-type: none;
+}
+.caption {
+  display: block;
+  /*color:red;*/
+  margin-top: 60px;
+}
+
+/*app levels*/
+.appLevels {
+  display: inline-block;
+}
+.appLevels img {
+  float: left;
+  margin-right: 20px;
+  max-width: 60%;
+  max-height: 60%;
+}
+.level {
+  overflow: hidden;
+}
+.level li {
+  margin: 0 0 20px 0px;
+}
+
+/*photo gallery*/
+.photoGallery {
+}
+
+.photoGallery img, .photoGallery video{
+  max-width: 100%;
+  display: inline;
+  float: left;
+  margin: 10px;
+}
+
+/* Parent wrapper to carousel. Width can be changed as needed. */
+.carousel-wrapper {
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+}
+
+/* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
+.carousel-wrapper * {
+  box-sizing: border-box;
+  margin: 40px;
+}
+
+/* We'll be using the 'transform' property to move the carousel's items, so setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
+.carousel {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* By default we're hiding items (except the initial one) until the JS initiates. Elements are absolutely positioned with a width of 100% (as we're styling for mobile first), letting the content's height dictate the height of the carousel. Our magic property here for all our animation needs is 'transition', taking the properties we wish to animate 'transform' and 'opacity', along with the length of time in seconds. */
+.carousel__photo {
+  opacity: 0;
+  position: absolute;
+  top:0;
+  width: 100%;
+  max-height: 50%;
+  margin: auto;
+  padding: 1rem 4rem;
+  z-index: 100;
+  transition: transform .5s, opacity .5s, z-index .5s;
+}
+
+/* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
+.carousel__photo.initial,
+.carousel__photo.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+/* Set 'z-index' to sit behind our '.active' item. */
+.carousel__photo.prev,
+.carousel__photo.next {
+  z-index: 800;
+}
+
+/* Translate previous item to the left */
+.carousel__photo.prev {
+  transform: translateX(-100%);
+}
+
+/* Translate next item to the right */
+.carousel__photo.next {
+  transform: translateX(100%);
+}
+
+/* Style navigation buttons to sit in the middle, either side of the carousel. */
+.carousel__button--prev,
+.carousel__button--next {
+  position: absolute;
+  top:0%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #FFF;
+  transform: translateY(-150%);
+  /*border-radius: 50%;*/
+  cursor: pointer; 
+  z-index: 1001; /* Sit on top of everything */
+  border:1px solid black;
+/*  opacity: 0;  Hide buttons until carousel is initialised 
+  transition:opacity 1s;*/
+}
+
+.carousel__button--prev {
+  left:35%;
+}
+
+.carousel__button--next {
+  right:35%;
+}
+
+/* Use pseudo elements to insert arrows inside of navigation buttons */
+.carousel__button--prev::after,
+.carousel__button--next::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel__button--next::after {
+  left: 47%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*.carousel {
+  align-items: center;
+  display: flex;
+  margin: 2rem auto;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  max-height: 300px;
+}
+  
+.carousel__images {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.25s;
+}
+    
+.carousel__images img {
+      border-radius: 5px;
+    }
+  
+  
+.carousel button {
+    background: teal;
+    border: 0;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 3rem;
+    opacity: 0.25;
+    position: absolute;
+    transition: opacity 0.25s;
+    width: 3rem;
+    z-index: 1;
+}
+
+.carousel button:hover {
+  opacity: 50%;
+}
+
+
+
+.carousel__button.previous {
+      left: 5px;
+    }
+    
+.carousel__button.next {
+      right: 5px;
+    }
+    
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+*/
+
+/*side navigation*/
+.sidenav {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  top: 3%;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 2vw;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.my-spin {
+  transform-box: fill-box;
+  animation: spin 2s linear infinite;
+  transform-origin:50% 50%;
+  display: inline-block;
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% {  transform: rotate(359deg); }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*homepage*/
+.homepage {
+  margin-left: 20%;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  z-index: -99999;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /*width: 100%;*/
+  height: 100vh;
+  background-color: #92f7b5;
+}
+.column img:hover {
+  opacity: 50%;
+}
+
+.homepage h1 {
+  font-size: 100px;
+}
+
+.css-1kmh77e {
+    display: grid;
+    margin-left: 20%;
+    gap: 2rem 2vw;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    margin-bottom: 0px;
+}
+
+.introHeader {
+    width: 80vw;
+    margin-top: -32px;
+    margin-bottom: 9.5vw;
+    margin-left: 4vw;
+    color: #000;
+    font-size: 3vw;
+    /* line-height: 90%; */
+    font-weight: 200px;
+    letter-spacing: 10px;
+        margin-right: 4vw;
+}
+
+.introText{
+    margin-top: 10vw;
+    margin-bottom: 1vw;
+    border-style: none;
+    border-width: 1px;
+    border-color: #c4c4c4;
+    letter-spacing: 1px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20%;
+}
+
+/* Create four equal columns */
+.column {
+  flex: 40%;
+  padding: 10px;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+ /*On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.exImage{
+  width: 250px;
+  animation:bounce 5s linear infinite alternate;
+
+}
+
+.exImage1{
+  width: 250px;
+  animation:bounce 8s linear infinite alternate;
+
+}
+
+.exImage2{
+  width: 250px;
+  animation:bounce 3s linear infinite ;
+
+}
+
+.exImage3{
+  width: 250px;
+  animation:bounce 5s linear infinite alternate-reverse;
+
+}
+
+.exImage4{
+  width: 250px;
+  animation:bounce 6s linear infinite alternate;
+
+}
+.exImage5{
+  width: 250px;
+  animation:bounce 3s linear infinite reverse;
+
+}
+
+.bounce{
+  animation:bounce 4s linear infinite ;
+  }
+ @keyframes bounce{
+    0%{
+      transform:translate(-100px,0px);
+     
+      }
+    25%{
+       transform:translate(200px,200px);
+      
+      }
+    50%{
+       transform:translate(400px,0px);  
+      /*background:green;*/
+      }
+     75%{
+       transform:translate(300px,0px);
+        
+
+       }
+   100%{
+      transform:translate(-100px,0px);
+      
+      }   
+   }
+.exImage:hover {
+
+  /*animation: shake 0.5s;
+  animation-iteration-count: infinite;*/
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
