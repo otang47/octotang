@@ -396,12 +396,14 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   margin-left: 20%;
+  display: none;
 }
 
 /* Create four equal columns */
 .column {
   flex: 40%;
   padding: 10px;
+  display: none;
 }
 
 /* On screens that are 992px wide or less, go from four columns to two columns */
@@ -416,6 +418,16 @@ a:hover {
   .row {
     flex-direction: column;
   }
+  .field {
+    display: none;
+  }
+  .row {
+    display: inline-block;
+  }
+  .column {
+    display: inline-block;
+  }
+
 }
 
 .container {
