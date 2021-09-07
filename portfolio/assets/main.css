@@ -7,6 +7,7 @@ body {
   font-family: workSans;
   background-color: black;
   color: white;
+
 }
 
 q {
@@ -38,6 +39,12 @@ hr {
 a {
   color: white;
   text-decoration: none;
+  position: relative;
+  z-index: 100;
+}
+
+a:hover {
+  background-color: yellow;
 }
 
 .content-wrap {
@@ -155,6 +162,7 @@ a {
   width: 100%;
   max-height: 50%;
   margin: auto;
+  margin-top: 30px;
   padding: 1rem 4rem;
   z-index: 100;
   transition: transform .5s, opacity .5s, z-index .5s;
@@ -531,3 +539,142 @@ a {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
+.scroll{ 
+    width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  /*background-color: yellow;*/
+ }
+.title {
+  position: fixed;
+  width: auto;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px; /* Negative half of height. */
+  margin-left: -250px; /* Negative half of width. */
+  text-align: center;
+  color: white;
+  font-size: 8rem;
+  pointer-events: none;
+
+}
+
+.container,.spacer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 8rem;
+  /*visibility: hidden;*/
+  opacity: 0;
+  pointer-events: none;
+  /*background-color: yellow;*/
+}
+
+.spacer {
+  visibility: visible;
+}
+
+.flower{
+  /*position: fixed;*/
+   margin: 0;
+  padding: 0;
+  max-height: 100vh;
+}
+
+.field {
+  width: auto;
+  height: 100vh;
+  /*display: block;*/
+  /*background-color: red;*/
+  /*position: fixed;*/
+
+
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  /*z-index: -10;*/
+  /*pointer-events: none;*/
+
+}
+.cls-1 {
+  transform: scale(50%);
+}
+.cls-2{
+/*left:0;
+bottom:0;*/
+transform: scale(30%);
+z-index: 100;
+
+
+/*transform: translate(0px, -20px);*/
+}
+.name {
+  position: fixed;
+  width: 600px;
+  height: 200px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px; /* Negative half of height. */
+  margin-left: -250px; /* Negative half of width. */
+  color: white;
+  font-size: 5rem;
+  /*visibility: hidden;*/
+  opacity: 0;
+  overflow: hidden;
+  /*background-color: yellow;*/
+  /*pointer-events: none;*/
+
+}
+
+.enter {
+  position: fixed;
+  width: 600px;
+  height: 200px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px; /* Negative half of height. */
+  margin-left: -250px; /* Negative half of width. */
+  color: white;
+  font-size: 5rem;
+
+}
+
+.flower {
+  transform: translate(0px, 50%);
+  /*overflow: hidden;*/
+  position: relative;
+  z-index: 100;
+  /*border: 1px solid red;*/
+  pointer-events: bounding-box;
+}
+
+.flowerTwo {
+  transform: translate(0px, -70%);
+  /*border: 1px solid red;*/
+  pointer-events: bounding-box;
+
+}
+.flowerThree {
+  transform: translate(70%, -190%);
+  /*background-color: yellow;*/
+  pointer-events: bounding-box;
+   /*z-index: 101;*/
+
+}
+.flowerFour {
+  transform: translate(70%, -100%);
+  /*border: 1px solid red;*/
+  pointer-events: bounding-box;
+   z-index: 101;
+   position: relative;
+
+
+}
