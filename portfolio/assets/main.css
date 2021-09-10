@@ -86,10 +86,18 @@ a:hover {
   text-decoration: none;
 }
 
+.navbar .right {
+  float: right;
+}
+
+.navbar .left {
+  float: left;
+}
 /* Change background on mouse-over */
 .navbar a:hover {
-  background: #ddd;
-  color: black;
+  background: black;
+  color: white;
+  text-decoration: underline;
 }
 
 /*playground*/
@@ -157,6 +165,7 @@ a:hover {
 }
 
 .photoGallery img, .photoGallery video{
+  max-height: 100vh;
   max-width: 100%;
   display: inline;
   float: left;
@@ -626,6 +635,7 @@ a:hover {
   padding: 0;
   max-height: 100vh;
 }
+
 
 .field {
   width: auto;
