@@ -7,9 +7,8 @@ function Calculate_Budget() {
     budget = (typeof budget == 'number' ? budget : 0) + 1000;
   } else if (pages == 2) {
     budget = (typeof budget == 'number' ? budget : 0) + 2000;
-  } else if (pages == 3) {
-    budget = (typeof budget == 'number' ? budget : 0) + 3000;
-  }
+  } 
+  
   if (animations == 1) {
     budget = (typeof budget == 'number' ? budget : 0) + 0;
   } else if (animations == 2) {
