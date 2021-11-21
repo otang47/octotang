@@ -1,4 +1,4 @@
-var budget, pages, animations, services, company, branding, client_name, email, advanced_seo, custom_functionalities, career_page, user_access, filtering_system, summary;
+var budget, pages, animations, service, company, branding, client_name, email, advanced_seo, custom_functionalities, career_page, user_access, filtering_system, summary;
 
 // Describe this function...
 function Calculate_Budget() {
@@ -18,9 +18,9 @@ function Calculate_Budget() {
   }
   if (service == 1) {
     budget = (typeof budget == 'number' ? budget : 0) + 1000;
-  } else if (services == 2) {
+  } else if (service == 2) {
     budget = (typeof budget == 'number' ? budget : 0) + 2000;
-  } else if (services == 3) {
+  } else if (service == 3) {
     budget = (typeof budget == 'number' ? budget : 0) + budget * 2;
   }
   if (advanced_seo == true) {
@@ -70,7 +70,7 @@ var we_tabs_next_button = '[bloc=next-question]';
 
     var we_activeTab,we_indexOfActiveTab, we_indexOfNextTab, we_indexOfPrevTab, we_prevTab, we_amountOfTabs, nextTab;
 
-    var tabList = ['pages'];
+    var tabList = ['service'];
 
     openTab(tabList[0]);
 
