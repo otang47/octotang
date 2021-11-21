@@ -170,6 +170,10 @@ $('[name='+value_string+']').on('input',function() {animations = $(this).val(); 
 
       });$("label.w-radio").on("click", function () {if ($(this).children('[name=animations]').length != 0) {animations = $('[name='+value_string+']', this).val();
 }
+var value_string = varToString({ animations });
+$('[name='+value_string+']').on('input',function() {client_name = $(this).val(); if($(this).is(':checkbox')) { client_name= !$(this).siblings('.w-checkbox-input').hasClass('w--redirected-checked'); }if($.isNumeric(client_name)) { client_name = parseFloat(client_name); }   Multi_Step_Check_Name_and_Email();
+});$("label.w-radio").on("click", function () {if ($(this).children('[name=client_name]').length != 0) {client_name = $('[name='+value_string+']', this).val();
+}                                                   
 });var value_string = varToString({ services });
 $('[name='+value_string+']').on('input',function() {services = $(this).val(); if($(this).is(':checkbox')) { services= !$(this).siblings('.w-checkbox-input').hasClass('w--redirected-checked'); }if($.isNumeric(services)) { services = parseFloat(services); }   Calculate_Budget();
   if (services == 1) {
