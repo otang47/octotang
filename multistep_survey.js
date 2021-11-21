@@ -192,7 +192,7 @@ $('[name='+value_string+']').on('input',function() {client_name = $(this).val();
 
         } else if (client_name == 2) {
 
-        nextTab = 'summary';
+        nextTab = 'photo_choices';
         we_activeTab = $(".w--tab-active").attr("data-w-tab");
         we_indexOfActiveTab = tabList.indexOf(we_activeTab);
         we_indexOfNextTab = we_indexOfActiveTab + 1;
