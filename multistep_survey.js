@@ -3,7 +3,7 @@ var budget, pages, animations, services, company, branding, client_name, email, 
 // Describe this function...
 function Calculate_Budget() {
   budget = 0;
-  if (pages == 1) {
+  if (service == 1) {
     budget = (typeof budget == 'number' ? budget : 0) + 1000;
   } else if (pages == 2) {
     budget = (typeof budget == 'number' ? budget : 0) + 2000;
