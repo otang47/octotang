@@ -128,7 +128,7 @@ var we_tabs_next_button = '[bloc=next-question]';
     }var value_string = varToString({ pages });
 $('[name='+value_string+']').on('input',function() {pages = $(this).val(); if($(this).is(':checkbox')) { pages= !$(this).siblings('.w-checkbox-input').hasClass('w--redirected-checked'); }if($.isNumeric(pages)) { pages = parseFloat(pages); }   Calculate_Budget();
 
-      nextTab = 'animations';
+      nextTab = 'custom_functionalities';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
       we_indexOfActiveTab = tabList.indexOf(we_activeTab);
       we_indexOfNextTab = we_indexOfActiveTab + 1;
@@ -150,7 +150,7 @@ $('[name='+value_string+']').on('input',function() {pages = $(this).val(); if($(
 });var value_string = varToString({ animations });
 $('[name='+value_string+']').on('input',function() {animations = $(this).val(); if($(this).is(':checkbox')) { animations= !$(this).siblings('.w-checkbox-input').hasClass('w--redirected-checked'); }if($.isNumeric(animations)) { animations = parseFloat(animations); }   Calculate_Budget();
 
-      nextTab = 'services';
+      nextTab = 'client_name';
       we_activeTab = $(".w--tab-active").attr("data-w-tab");
       we_indexOfActiveTab = tabList.indexOf(we_activeTab);
       we_indexOfNextTab = we_indexOfActiveTab + 1;
@@ -192,7 +192,7 @@ $('[name='+value_string+']').on('input',function() {services = $(this).val(); if
 
         } else if (services == 2) {
 
-        nextTab = 'branding';
+        nextTab = 'summary';
         we_activeTab = $(".w--tab-active").attr("data-w-tab");
         we_indexOfActiveTab = tabList.indexOf(we_activeTab);
         we_indexOfNextTab = we_indexOfActiveTab + 1;
