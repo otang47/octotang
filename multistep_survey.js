@@ -3,11 +3,11 @@ var budget, pages, animations, services, company, branding, client_name, email, 
 // Describe this function...
 function Calculate_Budget() {
   budget = 0;
-  if (service == 1) {
-    budget = (typeof budget == 'number' ? budget : 0) + 1000;
-  } else if (pages == 2) {
-    budget = (typeof budget == 'number' ? budget : 0) + 2000;
-  } 
+//   if (service == 1) {
+//     budget = (typeof budget == 'number' ? budget : 0) + 1000;
+//   } else if (pages == 2) {
+//     budget = (typeof budget == 'number' ? budget : 0) + 2000;
+//   } 
   
   if (animations == 1) {
     budget = (typeof budget == 'number' ? budget : 0) + 0;
@@ -16,10 +16,10 @@ function Calculate_Budget() {
   } else if (animations == 3) {
     budget = (typeof budget == 'number' ? budget : 0) + 4000;
   }
-  if (services == 1) {
-    budget = (typeof budget == 'number' ? budget : 0) + 0;
+  if (service == 1) {
+    budget = (typeof budget == 'number' ? budget : 0) + 1000;
   } else if (services == 2) {
-    budget = (typeof budget == 'number' ? budget : 0) + budget;
+    budget = (typeof budget == 'number' ? budget : 0) + 2000;
   } else if (services == 3) {
     budget = (typeof budget == 'number' ? budget : 0) + budget * 2;
   }
